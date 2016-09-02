@@ -1,0 +1,19 @@
+# Site settings
+name: Prachya Boonsri
+title: Ocean
+email: isanromeo@gmail.com
+description: Engineer / Gardener / Buddhist
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://blank.com" # the base hostname & protocol for your site
+github_username:  oceanfish52
+
+
+# Build settings
+port: 2500
+markdown: kramdown
+highlighter: pygments.rb
+exclude: ["node_modules", "gulpfile.js", "package.json"]
+
+sass:
+    sass_dir:assets/css
+    style:compressed

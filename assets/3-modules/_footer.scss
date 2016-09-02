@@ -1,0 +1,56 @@
+footer {
+    background-image: url('../img/footer-ocean.jpg');
+    background-size: cover;
+    background-repeat: no-repeat no-repeat;
+    //background-position: center;
+    .lockup {
+        padding: 50px 20px;
+        @include clearfix;
+        .content-wrap {
+            .copyright {
+                float: right;
+                font-size: 16px;
+                font-family: $font-fira;
+                margin: 10px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+            nav {
+                float: left;
+                ul {
+                    a {
+                        color: $lizard;
+                        margin-right: 10px;
+                        font-size: 16px;
+                        display: inline-block;
+                        padding: 10px;
+                        color: $lizard;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        font-family: $font-roboto;
+                    }
+                    &:hover {
+                        color: $navy;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media($mobile) {
+    footer {
+        background-size: 100% 100%;
+        .lockup {
+            .content-wrap {
+                .copyright {
+                    float: none;
+                    font-size: 14px;
+                }
+                nav {
+                    display: none;
+                }
+            }
+        }
+    }
+}

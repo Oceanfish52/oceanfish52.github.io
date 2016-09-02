@@ -1,0 +1,97 @@
+@mixin grid-item-columns($columns) {
+    width: (100% / 12) * $columns;
+}
+
+.about {
+    background-color: $cloud;
+    h2 {
+        margin: 0px;
+    }
+    .hero {
+        .hero-content {
+            max-width: 780px;
+            display: flex;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px;
+            .img-circle {
+                @include size(200px);
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.grid-items-lines {
+    @include clearfix;
+    position: relative;
+    .grid-item {
+        background: #FFFFFF;
+        border-bottom: $navy;
+        border-right: $navy;
+        cursor: pointer;
+        float: left;
+        height: $grid-item-height;
+        outline: none;
+        overflow: hidden;
+        padding: 0.5em;
+        text-decoration: none;
+        @include transition(all 0.2s ease-in-out);
+        width: 100%;
+        @include media($large-screen) {
+            @include grid-item-columns($grid-item-columns);
+        }
+        &:focus,
+        &:hover {
+            background: transparentize($grid-item-color, 0.9);
+        }
+    }
+    .grid-item img {
+        display: block;
+        height: 2.5em;
+        margin-bottom: 1.2em;
+        opacity: 0.2;
+    }
+    .grid-item h1 {
+        color: $grid-item-color;
+        font-size: 18px;
+        padding-top: 20px;
+        margin-bottom: 0.9em;
+    }
+    .grid-item p {
+        font-family: $font-fira;
+        font-size: 16px;
+        color: transparentize($grid-item-color, 0.4);
+        line-height: 1.5em;
+        margin: 0px;
+        @include media($medium-screen) {
+            max-width: 100%;
+        }
+    }
+    .grid-item-big {
+        @include media($large-screen) {
+            @include grid-item-columns($grid-item-big-columns);
+        }
+        p {
+            @include media($medium-screen) {
+                max-width: 60%;
+            }
+        }
+    }
+    // this, below, might not be the most beautiful solution but it removes the outer borders by using the background color.
+    .bottom-cover {
+        background: #FFFFFF;
+        bottom: 0;
+        height: 3px;
+        position: absolute;
+        width: 100%;
+    }
+    .right-cover {
+        background: #FFFFFF;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        width: 4px;
+    }
+}

@@ -1,0 +1,213 @@
+html body {
+    width: 100%;
+    height: 100%;
+    background-color: $gray;
+}
+
+header {
+    background: url(../img/bg-ocean.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 148px;
+    font-weight: 700;
+    color: $navy;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    font-family: $font-oswald;
+    clear: both;
+}
+
+.blog {
+    background: no-repeat center center;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: auto;
+    .site-heading {
+        text-align: center;
+        padding: 80px 0;
+    }
+    h1 {
+        color: $navy;
+        margin: 0px;
+        padding: 0px;
+        font-size: 100px;
+        font-weight: 800;
+    }
+    .text-mine {
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    .line {
+        border: solid $cloud 2px;
+        clear: both;
+        max-width: 500px;
+        margin: 15px auto;
+    }
+}
+
+nav {
+    float: right;
+    margin: 0px 20px;
+    ul {
+        list-style-type: none;
+        li {
+            float: left;
+            padding: 5px 5px;
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(211, 211, 211, 0.6);
+                a {
+                    color: $navy;
+                }
+            }
+            a {
+                display: inline-block;
+                margin: 0px 20px;
+                padding: 10px 5px;
+                color: $lizard;
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-family: $font-roboto;
+            }
+        }
+    }
+}
+
+h3 {
+    padding: 5px;
+    line-height: 1.2;
+    margin: 0px;
+    &.text-main {
+        font-family: $font-roboto;
+        font-weight: 700;
+        font-size: 128px;
+        color: $navy;
+        text-transform: uppercase;
+    }
+    span {
+        display: inline-block;
+        padding: 0px 40px 20px;
+        border: $navy solid 10px;
+    }
+}
+
+.text-mine {
+    font-family: $font-roboto;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.text-desp {
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    line-height: 1px;
+}
+
+.text-ver {
+    color: $teal;
+    position: absolute;
+    top: 90px;
+    left: 850px;
+}
+
+header {
+    @media (max-width: 736px) {
+        nav {
+            float: none;
+            margin: 0px auto;
+            ul {
+                li {
+                    float: none;
+                    padding: 0px 5px;
+                    &:hover {
+                        @include animation(scale 1.0s ease-in, slide 2.0s ease);
+                        a {
+                            color: $navy;
+                            font-size: 16px;
+                        }
+                    }
+                    a {
+                        margin: 0px 10px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        h1 {
+            padding-top: 0px;
+            font-size: 84px;
+        }
+        h3 {
+            padding: 0px;
+            &.text-main {
+                font-size: 72px;
+            }
+            span {
+                display: inline-block;
+                padding: 0px 20px 10px;
+                border: $navy solid 7px;
+            }
+        }
+        .text-mine {
+            font-family: $font-roboto;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        .text-desp {
+            font-size: 12px;
+            text-align: center;
+            letter-spacing: 0.05em;
+            line-height: 1px;
+        }
+    }
+}
+
+////////////////////---------------- body ----------------////////////////////
+////////////////////--------------------------------------////////////////////
+p {
+    color: $navy;
+}
+
+.intro-header {
+    padding: 100px;
+    .post-heading {
+        h1 {
+            margin: 0px;
+            padding: 70px 0px 10px;
+            font-size: 7em;
+            letter-spacing: 0px;
+            color: $cloud;
+        }
+        .subheading {
+            font-size: 2em;
+            font-weight: 400;
+            margin: 0px;
+        }
+        .meta {
+            padding-top: 10px;
+            color: $navy;
+        }
+    }
+    @media (max-width: 736px) {
+        padding: 20px 100px 100px 100px;
+        .post-heading {
+            h1 {
+                font-size: 4em;
+            }
+        }
+    }
+}
