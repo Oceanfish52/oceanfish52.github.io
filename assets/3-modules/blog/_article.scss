@@ -1,0 +1,20 @@
+article {
+    @include outer-container(100%);
+    background-color: $cloud;
+    padding: 20px 0px 50px;
+    font-size: 1.4em;
+    .container {
+        @include span-columns(10);
+        @include shift(1);
+        .post-content {
+            text-align: left;
+        }
+        blockquote {
+            color: $lizard;
+            font-style: italic;
+        }
+    }
+    @include media($mobile) {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,32 @@
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a href="javascript:void(0)">
+                resume
+                </a>
+            </li>
+            <li>
+                <a href="#about">
+                about Me
+                </a>
+            </li>
+            <li>
+                <a href="#contact">
+                    contact
+                </a>
+            </li>
+            {% for page in site.pages %}{% if page.title %} {% if page.url != '/404.html' %}
+            <li>
+                <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+            </li>
+            {% endif %} {% endif %}{% endfor %}
+        </ul>
+    </nav>
+    <p class="text-ver">ver.1.0 beta</p>
+    <h1><span>  welcome  </span></h1>
+    <p style="text-transform: uppercase;" "> to </p>
+    <h3 class="text-main "><span> {{site.title}} </span></h3>
+    <p class="text-mine ">My name is {{site.name}}</p> 
+    <p class="text-desp "> {{site.description}} </p> 
+</header>
