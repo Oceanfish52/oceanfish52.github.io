@@ -53,6 +53,17 @@ h1 {
         max-width: 500px;
         margin: 15px auto;
     }
+    @include media($mobile) {
+        .site-heading {
+            padding: 50px 0px;
+            h1 {
+                font-size: 78px;
+            }
+        }
+        .line {
+            max-width: 300px;
+        }
+    }
 }
 
 nav {

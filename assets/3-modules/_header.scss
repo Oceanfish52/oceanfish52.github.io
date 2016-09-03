@@ -94,11 +94,9 @@ h3 {
 }
 
 header {
-    @media (max-width: 736px) {
+    @include media($mobile) {
         .text-ver {
-            font-size: 11px;
-            top: 140px;
-            left: 310px;
+            display: none;
         }
         nav {
             float: none;
