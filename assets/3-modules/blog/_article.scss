@@ -3,9 +3,14 @@ article {
     background-color: $cloud;
     padding: 20px 0px 50px;
     font-size: 1.4em;
+    @include media($mobile) {
+        font-size: 1em;
+        padding: 20px 0px 30px;
+    }
     .container {
         @include span-columns(10);
         @include shift(1);
+        padding-bottom: 10px;
         .post-content {
             text-align: left;
         }
@@ -14,7 +19,26 @@ article {
             font-style: italic;
         }
     }
-    @include media($mobile) {
-        font-size: 1em;
+    .pager-content {
+        @include span-columns(12);
+        li {
+            a {
+                color: $lizard;
+                &:hover,
+                &:focus {
+                    color: $navy;
+                }
+            }
+        }
+        .pager {
+            font-size: 14px;
+            margin: 0px 30px;
+            .previous {
+                float: left;
+            }
+            .next {
+                float: right;
+            }
+        }
     }
 }

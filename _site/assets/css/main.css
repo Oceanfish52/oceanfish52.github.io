@@ -861,6 +861,12 @@ h1 {
   font-family: "Oswald", sans-serif;
   clear: both; }
 
+.nav-version {
+  float: left;
+  margin: 10px;
+  font-size: 14px;
+  color: #001f3f; }
+
 nav {
   float: right;
   margin: 0px 20px; }
@@ -911,17 +917,9 @@ h3 {
   letter-spacing: 0.05em;
   line-height: 1px; }
 
-.text-ver {
-  color: #39CCCC;
-  position: absolute;
-  top: 90px;
-  left: 850px; }
-
-@media (max-width: 736px) {
+@media screen and (max-width: 480px) {
   header .text-ver {
-    font-size: 11px;
-    top: 140px;
-    left: 310px; }
+    display: none; }
   header nav {
     float: none;
     margin: 0px auto; }

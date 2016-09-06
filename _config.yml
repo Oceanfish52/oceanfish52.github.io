@@ -11,7 +11,7 @@ github_username:  oceanfish52
 # Build settings
 port: 2500
 markdown: kramdown
-highlighter: pygments.rb
+highlighter: rouge
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 sass:
