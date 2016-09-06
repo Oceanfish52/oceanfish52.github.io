@@ -1,6 +1,6 @@
 <section class="container">
     <div class="in-container">
-        {% for post in site.posts offset: 0 limit: 4 %}
+        {% for post in site.posts offset: 0 limit: 7 %}
         <div class="post-preview">
             <a href="{{ site.prefix }}{{ post.url }}">
                 <h2 class="post-title">{{ post.title }}</h2></a>
@@ -9,16 +9,18 @@
         </div>
         {% endfor %}
     </div>
-    <hr>
-    <ul class="pager">
-        {% if page.previous.url %}
-        <li class="previous">
-            <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
-        </li>
-        {% endif %} {% if page.next.url %}
-        <li class="next">
-            <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
-        </li>
-        {% endif %}
-    </ul>
+    <div class="pager-content">
+        <hr>
+        <ul class="pager">
+            {% if page.previous.url %}
+            <li class="previous">
+                <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+            </li>
+            {% endif %} {% if page.next.url %}
+            <li class="next">
+                <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
 </section>

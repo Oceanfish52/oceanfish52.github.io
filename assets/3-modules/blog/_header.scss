@@ -127,13 +127,6 @@ h3 {
     line-height: 1px;
 }
 
-.text-ver {
-    color: $teal;
-    position: absolute;
-    top: 90px;
-    left: 850px;
-}
-
 header {
     @media (max-width: 736px) {
         nav {
@@ -196,6 +189,7 @@ p {
 .intro-header {
     padding: 100px;
     .post-heading {
+        text-align: center;
         h1 {
             margin: 0px;
             padding: 70px 0px 10px;
@@ -205,19 +199,19 @@ p {
         }
         .subheading {
             font-size: 2em;
-            font-weight: 400;
+            font-weight: 300;
             margin: 0px;
         }
         .meta {
-            padding-top: 10px;
+            padding-top: 11px;
             color: $navy;
         }
     }
     @media (max-width: 736px) {
-        padding: 20px 100px 100px 100px;
+        padding: 20px 50px 100px 50px;
         .post-heading {
             h1 {
-                font-size: 4em;
+                font-size: 3.7em;
             }
         }
     }

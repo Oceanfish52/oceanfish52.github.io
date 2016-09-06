@@ -883,6 +883,13 @@ h1 {
     clear: both;
     max-width: 500px;
     margin: 15px auto; }
+  @media screen and (max-width: 480px) {
+    .blog .site-heading {
+      padding: 50px 0px; }
+      .blog .site-heading h1 {
+        font-size: 78px; }
+    .blog .line {
+      max-width: 300px; } }
 
 nav {
   float: right;
@@ -934,12 +941,6 @@ h3 {
   letter-spacing: 0.05em;
   line-height: 1px; }
 
-.text-ver {
-  color: #39CCCC;
-  position: absolute;
-  top: 90px;
-  left: 850px; }
-
 @media (max-width: 736px) {
   header nav {
     float: none;
@@ -983,24 +984,26 @@ p {
 
 .intro-header {
   padding: 100px; }
-  .intro-header .post-heading h1 {
-    margin: 0px;
-    padding: 70px 0px 10px;
-    font-size: 7em;
-    letter-spacing: 0px;
-    color: #FDFDFD; }
-  .intro-header .post-heading .subheading {
-    font-size: 2em;
-    font-weight: 400;
-    margin: 0px; }
-  .intro-header .post-heading .meta {
-    padding-top: 10px;
-    color: #001f3f; }
+  .intro-header .post-heading {
+    text-align: center; }
+    .intro-header .post-heading h1 {
+      margin: 0px;
+      padding: 70px 0px 10px;
+      font-size: 7em;
+      letter-spacing: 0px;
+      color: #FDFDFD; }
+    .intro-header .post-heading .subheading {
+      font-size: 2em;
+      font-weight: 300;
+      margin: 0px; }
+    .intro-header .post-heading .meta {
+      padding-top: 11px;
+      color: #001f3f; }
   @media (max-width: 736px) {
     .intro-header {
-      padding: 20px 100px 100px 100px; }
+      padding: 20px 50px 100px 50px; }
       .intro-header .post-heading h1 {
-        font-size: 4em; } }
+        font-size: 3.7em; } }
 
 article {
   max-width: 100%;
@@ -1013,12 +1016,17 @@ article {
     clear: both;
     content: "";
     display: block; }
+  @media screen and (max-width: 480px) {
+    article {
+      font-size: 1em;
+      padding: 20px 0px 30px; } }
   article .container {
     float: left;
     display: block;
     margin-right: 2.12766%;
     width: 82.97872%;
-    margin-left: 8.51064%; }
+    margin-left: 8.51064%;
+    padding-bottom: 10px; }
     article .container:last-child {
       margin-right: 0; }
     article .container .post-content {
@@ -1026,9 +1034,24 @@ article {
     article .container blockquote {
       color: #304352;
       font-style: italic; }
-  @media screen and (max-width: 480px) {
-    article {
-      font-size: 1em; } }
+  article .pager-content {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 100%; }
+    article .pager-content:last-child {
+      margin-right: 0; }
+    article .pager-content li a {
+      color: #304352; }
+      article .pager-content li a:hover, article .pager-content li a:focus {
+        color: #001f3f; }
+    article .pager-content .pager {
+      font-size: 14px;
+      margin: 0px 30px; }
+      article .pager-content .pager .previous {
+        float: left; }
+      article .pager-content .pager .next {
+        float: right; }
 
 .container {
   max-width: 100%;
@@ -1078,7 +1101,7 @@ article {
         color: #304352; }
   .container hr {
     margin: 0px;
-    border: 2px solid #39CCCC; }
+    border: 1px solid #304352; }
 
 footer {
   background-image: url("../img/footer-ocean.jpg");
